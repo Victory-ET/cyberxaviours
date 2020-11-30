@@ -1,0 +1,440 @@
+@font-face {
+    font-family: primidac;
+    src: url(fonts/LeagueGothic-Regular.otf);
+  }
+  
+body{
+    font-family: primidac;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+.navbar a{
+    text-decoration: none;
+}
+
+nav{
+    background: #0082e6;
+    height: 80px;
+    width: 100%;
+}
+
+.navbar .logo{
+    height: 40px;
+    width: 40px;
+    background: url("./logos/CX-DARK.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 10px;
+    
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    /* line-height: 10px; */
+    margin: 0 25px;
+}
+
+nav ul li a{
+    color: #fff;
+    font-size: 17px;
+    text-transform: uppercase; 
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+
+a.active,a:hover{
+    background: #1b9bff;
+    transition: .5s;
+}
+
+.ham{
+    font-size: 24px;
+    color: #fff;
+    float: right;
+    margin-right: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+
+
+/* first section */
+.landing{
+    /* background: url("./bg/bg.jpg") no-repeat;
+    background-size: cover; */
+    background: #000;
+    height: calc(100vh - 80px);
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+.left{
+    height: 100%;
+    width: 70%;
+    left: 0;
+    position: relative;
+    color: #fff;
+    /* display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center; */
+    padding-left: 10px;
+}
+
+.left .text{
+    margin-top: 25%;
+    font-size: 60px;
+    left: 10px;
+    letter-spacing: 2px;
+    position: relative;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 30px;
+    padding-bottom: 0;
+    margin-bottom: 15px;
+    height: 10px;
+}
+/* .left h2{
+    margin-top: 25%;
+    font-size: 60px;
+    left: 10px;
+    letter-spacing: 2px;
+    position: relative;
+} */
+
+.left p{
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+
+.text::before,.text::after{
+    content: attr(data-text);
+    position: absolute;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0;
+    top: 0;
+    left: 0;
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+}
+
+.text::before{
+    left: 3px;
+    text-shadow: -2px 0 red;
+    animation: glitch-1 2s 0s linear reverse infinite;    
+}
+.text::after{
+    left: -3px;
+    text-shadow: -2px 0 blue;
+    animation: glitch-2 2s 0s linear reverse infinite;
+}
+
+
+@keyframes glitch-1{
+    0%{
+        clip: rect(132px, 350px, 101px, 30px);
+    }
+    5%{
+        clip: rect(17px, 350px, 94px, 30px);
+    }
+    10%{
+        clip: rect(40px, 350px, 66px, 30px);
+    }
+    15%{
+        clip: rect(87px, 350px, 82px, 30px);
+    }
+    20%{
+        clip: rect(137px, 350px, 61px, 30px);
+    }
+    25%{
+        clip: rect(34px, 350px, 14px, 30px);
+    }
+    30%{
+        clip: rect(133px, 350px, 74px, 30px);
+    }
+    35%{
+        clip: rect(76px, 350px, 107px, 30px);
+    }
+    40%{
+        clip: rect(59px, 350px, 130px, 30px);
+    }
+    45%{
+        clip: rect(133px, 350px, 74px, 30px);
+    }
+    50%{
+        clip: rect(22px, 350px, 67px, 30px);
+    }
+    55%{
+        clip: rect(67px, 350px, 62px, 30px);
+    }
+    60%{
+        clip: rect(10px, 350px, 105px, 30px);
+    }
+    65%{
+        clip: rect(78px, 350px, 115px, 30px);
+    }
+    70%{
+        clip: rect(22px, 350px, 67px, 30px);
+    }
+    75%{
+        clip: rect(15px, 350px, 75px, 30px);
+    }
+    80%{
+        clip: rect(66px, 350px, 39px, 30px);
+    }
+    85%{
+        clip: rect(133px, 350px, 73px, 30px);
+    }
+    90%{
+        clip: rect(36px, 350px, 103px, 30px);
+    }
+    95%{
+        clip: rect(68px, 350px, 103px, 30px);
+    }
+    100%{
+        clip: rect(14px, 350px, 100px, 30px);
+    }
+}
+
+@keyframes glitch-2{
+
+    0%{
+        clip: rect(129px, 350px, 36px, 30px);
+    }
+    5%{
+        clip: rect(36px, 350px, 4px, 30px);
+    }
+    10%{
+        clip: rect(85px, 350px, 66px, 30px);
+    }
+    15%{
+        clip: rect(91px, 350px, 91px, 30px);
+    }
+    20%{
+        clip: rect(148px, 350px, 138px, 30px);
+    }
+    25%{
+        clip: rect(38px, 350px, 122px, 30px);
+    }
+    30%{
+        clip: rect(69px, 350px, 54px, 30px);
+    }
+    35%{
+        clip: rect(98px, 350px, 71px, 30px);
+    }
+    40%{
+        clip: rect(146px, 350px, 34px, 30px);
+    }
+    45%{
+        clip: rect(134px, 350px, 43px, 30px);
+    }
+    50%{
+        clip: rect(102px, 350px, 80px, 30px);
+    }
+    55%{
+        clip: rect(119px, 350px, 44px, 30px);
+    }
+    60%{
+        clip: rect(106px, 350px, 74px, 30px);
+    }
+    65%{
+        clip: rect(141px, 350px, 74px, 30px);
+    }
+    70%{
+        clip: rect(20px, 350px, 78px, 30px);
+    }
+    75%{
+        clip: rect(133px, 350px, 79px, 30px);
+    }
+    80%{
+        clip: rect(78px, 350px, 52px, 30px);
+    }
+    85%{
+        clip: rect(35px, 350px, 39px, 30px);
+    }
+    90%{
+        clip: rect(67px, 350px, 70px, 30px);
+    }
+    95%{
+        clip: rect(71px, 350px, 103px, 30px);
+    }
+    100%{
+        clip: rect(83px, 350px, 40px, 30px);
+    }
+}
+
+.left span{
+    color: #0082e6;
+}
+
+.right{
+    height: 100%;
+    width: 30%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar{
+    background: url("./logos/CX-BLUE.png") no-repeat;
+    background-size: contain;
+    height: 300px;
+    width: 300px;
+}
+
+.join-btn{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    left: 10%;
+    position: relative;
+    transform: translateX(-50%);
+    border: 1px solid #3498db;
+    background: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    
+    font-variant: unicase;
+    color: #3498db;
+    overflow: hidden;
+    border-radius: 15px;
+   
+}
+
+.join-btn:hover{
+    color: #fff;
+    transition: 0.8s;
+}
+
+.join-btn::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #3498db;
+    z-index: -1;
+    transition: 0.8s;
+    top: 0;
+    border-radius: 0 0 50% 50%;
+}
+
+.join-btn:hover::before{
+    height: 150%;
+}
+
+
+
+@media (max-width: 952px){
+   .navbar .logo{
+        height: 30px;
+        width: 30px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .ham{
+        display: block;
+    }
+
+    nav ul{
+        position: fixed;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        z-index: 3;
+        left: -100%;
+
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        transition: all .5s ease-in;
+    }
+
+    nav ul li{
+        display: block;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+    .landing{
+        flex-direction: column;
+    }
+
+    
+
+    .right{
+        padding-right: 10px;
+    }
+
+    .right .avatar{
+        height: 240px;
+        width: 240px;
+    }
+    .left .text{
+        font-size: 40px;
+    }
+    /* .left h2{
+        font-size: 40px;
+    } */
+    .landing .left,.right{
+        width: 100%;
+        height: 100%;
+    }
+    .join-btn{
+        left: 50%;
+    }
+    .left .text{
+        margin-top: 5%;
+    }
+}
