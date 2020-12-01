@@ -17,3 +17,22 @@ function video(){
     var video = document.querySelector('video');
     video.pause();
 }
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 2000,
+    reset: true
+});
+
+sr.reveal('.left', {})
+sr.reveal('.join-btn', {delay:200})
+sr.reveal('.home__img', {delay:400})
+sr.reveal('.avatar', {delay:200})
+
+sr.reveal('.header', {})
+sr.reveal('.about-content', {delay:200})
+
+
+sr.reveal('.header', {})
+sr.reveal('.service', {interval:200})

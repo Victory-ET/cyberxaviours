@@ -459,6 +459,9 @@ a.active,a:hover{
     color: #fff;
 }
 
+.about .header{
+    padding-top: 10%;
+}
 
 .header{
     text-align: center;
@@ -470,7 +473,7 @@ a.active,a:hover{
     transform: translateX(-50%);
 }
 
-.about .header::before{
+ .header::before{
     content: '';
     position: absolute;
     width: 100%;
@@ -496,6 +499,52 @@ a.active,a:hover{
 .services{
     height: 100vh;
     background: #0e1319;
+    color: #fff;
+    text-align: center;
+}
+
+
+.cen{
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.service h2{
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.service{
+    display: inline-block;
+    width: calc(100% /3);
+    margin: 0 -2px;
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.service:hover{
+    background: #0082e6;
+}
+
+.service:hover i{
+    color: #fff;
+}
+
+
+.service i{
+    color: #0082e6;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.service h2{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold; 
+    margin-bottom: 3px;
 }
 
 /* @media queries */
@@ -540,6 +589,8 @@ a.active,a:hover{
         font-size: 20px;
     }
 
+    
+
     a:hover,a.active{
         background: none;
         color: #0082e6;
@@ -580,7 +631,7 @@ a.active,a:hover{
         margin-top: 25%;
     }
 
-    .about .header{
+     .header{
         padding-top: 24%;
         font-size: 22px;
         width: 250px;
@@ -592,3 +643,27 @@ a.active,a:hover{
         max-width: 90%;
     }
 }
+
+@media screen and (max-width: 800px){
+    .service{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 500px){
+    .service{
+        width: 100%;
+    }
+    .services{
+        height: 100%;
+    }
+}
+    
+@media screen and (max-width: 604px){
+    .services{
+        height: 100%;
+    }
+    .service{
+        width: 100%;
+    }
+}
+    
