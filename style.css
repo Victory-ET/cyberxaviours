@@ -3,14 +3,27 @@
     src: url(fonts/LeagueGothic-Regular.otf);
   }
   
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: primidac;
+   
+}
+
+p{
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 *{
     margin: 0;
     padding: 0;
 }
+
+/* navbar codes */
 
 .navbar{
     text-decoration: none;
@@ -20,18 +33,21 @@ body{
 
 .navbar a{
     text-decoration: none;
+  
 }
 
 nav{
     background: #0082e6;
     height: 80px;
     width: 100%;
+    position: fixed;
+    z-index: 3;
 }
 
 .navbar .logo{
     height: 40px;
     width: 40px;
-    background: url("./logos/CX-DARK.png");
+    background: url("./logos/CX-WHITE.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -85,12 +101,20 @@ a.active,a:hover{
 
 
 
+.main{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
 /* first section */
 .landing{
     /* background: url("./bg/bg.jpg") no-repeat;
     background-size: cover; */
-    background: #000;
-    height: calc(100vh - 80px);
+    /* background: #000; */
+    background: #0e1319;
+    height: 100vh;
     width: 100%;
     overflow: hidden;
     display: flex;
@@ -108,6 +132,8 @@ a.active,a:hover{
     justify-content: center; */
     padding-left: 10px;
 }
+
+/* left division items */
 
 .left .text{
     margin-top: 25%;
@@ -132,9 +158,11 @@ a.active,a:hover{
 
 .left p{
     margin-top: 50px;
-    margin-left: 10px;
+    margin-left: 40px;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
+/* glitch text pseudo elements */
 
 .text::before,.text::after{
     content: attr(data-text);
@@ -145,7 +173,8 @@ a.active,a:hover{
     padding-bottom: 0;
     top: 0;
     left: 0;
-    background: #000;
+    /* background: #000; */
+    background: #0e1319;
     color: #fff;
     overflow: hidden;
 }
@@ -161,6 +190,8 @@ a.active,a:hover{
     animation: glitch-2 2s 0s linear reverse infinite;
 }
 
+
+/* glitch animation */
 
 @keyframes glitch-1{
     0%{
@@ -297,7 +328,10 @@ a.active,a:hover{
 
 .left span{
     color: #0082e6;
+    font-weight: bold;
 }
+
+/* right division */
 
 .right{
     height: 100%;
@@ -308,6 +342,8 @@ a.active,a:hover{
     align-items: center;
 }
 
+/* right side logo */
+
 .avatar{
     background: url("./logos/CX-BLUE.png") no-repeat;
     background-size: contain;
@@ -315,10 +351,66 @@ a.active,a:hover{
     width: 300px;
 }
 
+/* trailer player */
+.avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.trailer{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  background: rgba(0, 0, 0, .95);  
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+ .showing{
+    visibility: visible;
+    opacity: 1;
+}
+
+.trailer video{
+    position: relative;
+    max-width: 900px;
+    outline: none;
+}
+
+#vid{
+    font-size: 52px;
+    color: red;
+    z-index: 2;
+    /* display: block; */
+    visibility: visible;
+    opacity: 1;
+}
+
+#close{
+    color: #fff;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    max-width: 32px;
+    font-size: 32px;
+}
+
+/* get started button */
+
 .join-btn{
     margin-top: 10px;
     margin-bottom: 20px;
-    left: 10%;
+    left: 20%;
     position: relative;
     transform: translateX(-50%);
     border: 1px solid #3498db;
@@ -327,12 +419,14 @@ a.active,a:hover{
     font-size: 15px;
     cursor: pointer;
     
-    font-variant: unicase;
+    /* font-variant: unicase; */
     color: #3498db;
     overflow: hidden;
     border-radius: 15px;
    
 }
+
+
 
 .join-btn:hover{
     color: #fff;
@@ -357,6 +451,54 @@ a.active,a:hover{
 }
 
 
+
+/* about section */
+.about{
+    height: 100vh;
+    background: #0e1319;
+    color: #fff;
+}
+
+
+.header{
+    text-align: center;
+    padding-top: 10%;
+    font-size: 32px;
+    position: relative;
+    width: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about .header::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0082e6;
+}
+
+.about-content{
+    margin-top: 60px;
+    position: relative;
+    width: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-content p {
+    margin-left: 15px;
+}
+
+/* services section */
+.services{
+    height: 100vh;
+    background: #0e1319;
+}
+
+/* @media queries */
 
 @media (max-width: 952px){
    .navbar .logo{
@@ -435,6 +577,18 @@ a.active,a:hover{
         left: 50%;
     }
     .left .text{
-        margin-top: 5%;
+        margin-top: 25%;
+    }
+
+    .about .header{
+        padding-top: 24%;
+        font-size: 22px;
+        width: 250px;
+    }
+}
+
+@media (max-width: 991px){
+    .trailer video{
+        max-width: 90%;
     }
 }

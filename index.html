@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyber Xaviours</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
@@ -14,32 +17,48 @@
         <input type="checkbox" id="check">
         <label for="check"  class="ham"><i class="fas fa-bars"></i></label>
             <ul>
-                <li><a class="active" href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">JOIN US</a></li>
-                <li><a href="#">CONSULTANCY</a></li>
-                <li><a href="#">BLOG</a></li>
+                <li><a class="active nav__link" href="#home">HOME</a></li>
+                <li><a class="nav__link" href="#about">ABOUT</a></li>
+                <li><a class="nav__link" href="#services">SERVICES</a></li>
+                <li><a class="nav__link" href="#">CONSULTANCY</a></li>
+                <li><a class="nav__link" href="#">BLOG</a></li>
             </ul>
      
     </nav>
     <div class="main">
-    <section class="landing">
+    <section class="landing" id="home">
         <div class="left">
             <!-- <div class="text"><h2 data-text="CYBER SECURITY">CYBER SECURITY</h2></div> -->
             <div class="text" data-text="CYBER SECURITY">CYBER SECURITY</div>
             <p>Hey there, <br> Welcome to the Official <span>Cyber Xaviours</span> site.<br>
-           A perfect choice if you're looking foward to learning or developing existing knowledge in cyber srcurity<br>
+           A perfect choice if you're looking foward to learning or developing existing<br>knowledge in cyber security<br>
            join us today!...
         </p>
-        <button class="join-btn">Join Us</button>
+        <button class="join-btn">Get Started</button>
         </div>
         <div class="right">
-            <div class="avatar"></div>
+            <div class="avatar">
+                <a href="#" onclick="video();"><i id="vid" class="fa fa-youtube-play"></i></a>
+            </div>
+        </div>
+        <div class="trailer">
+            <video src="./trailer/trailer.mp4" controls='true'></video>
+            <a onclick="video();" href="#"><i class="fa fa-close" id="close"></i></a>
         </div>
     </section>
-    <section class="about">
-
+    <section class="about" id="about">
+        <div class="header"><h1>What's Cyber Xaviours</h1></div>
+        <div class='about-content'>
+            <p>
+                Cyber Xaviours  is a cyber security team that's aimed at bringing security to everyoneand saving the cyber space from all forms of cyber threats.
+            </p>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <div class="header">What we do</div>
     </section>
 </div>
+
+<script src="./js/main.js"></script>
 </body>
 </html>
