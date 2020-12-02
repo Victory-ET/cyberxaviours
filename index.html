@@ -14,14 +14,14 @@
     <nav class="navbar">
         <div class="logo">
         </div>
-        <input type="checkbox" id="check">
+        <input type="checkbox" id="check" value="off">
         <label for="check"  class="ham"><i class="fas fa-bars"></i></label>
             <ul>
-                <li><a class="active nav__link" href="#home">HOME</a></li>
-                <li><a class="nav__link" href="#about">ABOUT</a></li>
-                <li><a class="nav__link" href="#services">SERVICES</a></li>
-                <li><a class="nav__link" href="#">CONSULTANCY</a></li>
-                <li><a class="nav__link" href="#">BLOG</a></li>
+                <li><a class="active nav__link" onclick="closing();" href="#home">HOME</a></li>
+                <li><a class="nav__link" onclick="closing();" href="#about">ABOUT</a></li>
+                <li><a class="nav__link" onclick="closing();" href="#services">SERVICES</a></li>
+                <li><a class="nav__link" onclick="closing();" href="#">CONSULTANCY</a></li>
+                <li><a class="nav__link" onclick="closing();" href="#">BLOG</a></li>
             </ul>
      
     </nav>
@@ -38,7 +38,7 @@
         </div>
         <div class="right">
             <div class="avatar">
-                <a href="#" onclick="video();"><i id="vid" class="fa fa-youtube-play"></i></a>
+                <a href="#" onclick="video();"><i id="vid" class="fa fa-play"></i></a>
             </div>
         </div>
         <div class="trailer">

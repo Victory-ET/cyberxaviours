@@ -611,8 +611,8 @@ a.active,a:hover{
     }
 
     .right .avatar{
-        height: 240px;
-        width: 240px;
+        height: 180px;
+        width: 180px;
     }
     .left .text{
         font-size: 40px;
@@ -632,10 +632,19 @@ a.active,a:hover{
     }
 
      .header{
-        padding-top: 24%;
+
         font-size: 22px;
         width: 250px;
     }
+
+    .about .header{
+        padding-top: 34%;
+    }
+
+    .about-content{
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 991px){

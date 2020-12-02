@@ -36,3 +36,33 @@ sr.reveal('.about-content', {delay:200})
 
 sr.reveal('.header', {})
 sr.reveal('.service', {interval:200})
+
+
+
+//closing nav on a click
+var cbox = document.getElementById('check');
+function closenav(){
+
+
+cbox.value = 'on';
+// if(cbox.checked = false)
+// if(cbox.value == 'on'){
+//     console.log('on');
+// }
+// else{
+//     cbox.value='tested';
+//     console.log(cbox.value)
+// }
+
+
+}
+var ham = document.querySelector('.ham');
+
+ham.addEventListener('click', closenav());
+
+function closing(){
+    if(cbox.value = 'on'){
+        cbox.checked = false;
+        cbox.value = 'off';
+    }
+}
