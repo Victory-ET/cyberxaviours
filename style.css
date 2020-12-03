@@ -418,12 +418,12 @@ a.active,a:hover{
     padding: 10px 20px;
     font-size: 15px;
     cursor: pointer;
-    
+    outline: none;
     /* font-variant: unicase; */
     color: #3498db;
     overflow: hidden;
     border-radius: 15px;
-   
+  
 }
 
 
@@ -431,6 +431,7 @@ a.active,a:hover{
 .join-btn:hover{
     color: #fff;
     transition: 0.8s;
+    
 }
 
 .join-btn::before{
@@ -611,11 +612,21 @@ a.active,a:hover{
     }
 
     .right .avatar{
-        height: 180px;
-        width: 180px;
+        height: 140px;
+        width: 140px;
     }
+
+    #vid{
+        font-size: 30px;
+    }
+
     .left .text{
         font-size: 40px;
+        margin-left: -19px;
+    }
+
+    .left p{
+        margin-left: 11px;
     }
     /* .left h2{
         font-size: 40px;
@@ -645,6 +656,9 @@ a.active,a:hover{
         width: 100%;
     }
 
+    .services .header{
+        padding-top: 32%;
+    }
 }
 
 @media (max-width: 991px){
