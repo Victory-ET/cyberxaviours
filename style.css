@@ -627,6 +627,7 @@ a.active,a:hover{
 
     .left p{
         margin-left: 11px;
+        margin-right: 10px;
     }
     /* .left h2{
         font-size: 40px;
@@ -690,3 +691,4 @@ a.active,a:hover{
     }
 }
     
+
